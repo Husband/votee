@@ -26,7 +26,11 @@ class Votee
     public function __construct($app)
     {
         $this->app = $app;
-        $this->user = $this->app->auth->user();
+        
+        $class = $this->config['user_class'];
+        $user = new $class;
+        $this->user = $user;
+        
         $this->config = config('votee');
     }
 
