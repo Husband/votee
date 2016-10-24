@@ -12,7 +12,7 @@ class CreateVoteableTables extends Migration
         Schema::create('voteable', function (Blueprint $table) {
             $table->increments('id');
             $table->morphs('voteable');
-            $table->string('user_id', 36)->index();
+            $table->string('user_id', 40)->index();
             $table->smallInteger('value');
             $table->timestamps();
 
