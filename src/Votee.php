@@ -26,12 +26,11 @@ class Votee
     public function __construct($app)
     {
         $this->app = $app;
-        
+        $this->config = config('votee');
+
         $class = $this->config['user_class'];
         $user = new $class;
         $this->user = $user;
-        
-        $this->config = config('votee');
     }
 
     public function render($content, $options = [])
