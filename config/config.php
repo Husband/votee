@@ -19,5 +19,6 @@ return [
         'up'      => 1,
         'down'    => -1,
         'neutral' => 0
-    ]
+    ],
+    'user_class' => '\Laravolt\Votee\Session'
 ];
